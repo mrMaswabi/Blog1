@@ -1,0 +1,138 @@
+/* =============================================================================   DEFAULTS  ============================================================================= */
+/* STYLE THAT SHOULD TAKE EFFECT BY DEFAULT IF I USE AN ELEMENT AND DON'T APPLY ANY SYLES THIS WILL APPLY BY DEFAULT   */
+* {
+  /* helps keep width  */
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fbeec1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hide{
+
+  display: none;
+}
+/* =============================================================================   DEFAULTS  ============================================================================= */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* =============================================================================  COMPONENTS ============================================================================= */
+
+/* ELEMENTS THAT PROVIDE OR DISPLAY INFORMATION */
+
+header {
+  width: 100%;
+  height: 80px;
+  background—color: white;
+  border—bottom: 1px solid;
+  padding: 0 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aliceblue;
+  box-shadow: 0.5px 0.5px white, -0.01em 0 0.9em gray;
+  /* border: 1px solid red; */
+}
+header nav {
+  height: inherit;
+  display: flex; 
+  align-items: center;
+}
+header ul {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+header .navmenu .navitem .dropdown {
+  /* border: 1px solid red; */
+  width: 190px;
+  top: 80px;
+  left: 0px;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px white, -0.01em 0 0.9em gray;
+  transform: translateY(35px);
+  z-index: -5;
+  opacity: 0;
+}
+header .navmenu .navitem:hover .dropdown  {
+  transform: translateY(0);
+  z-index: 5;
+  opacity: 1;
+  transition: all 0.25s cubic-bezier(.17,.67,.6,.31) ;
+}
+
+header .navmenu .navitem .dropdown::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid white;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+header .navmenu .navitem .dropdown li {
+  border-bottom: 1px solid #dfeef3;
+}
+header .navmenu .navitem .dropdown li:last-child::after {
+  /* border-bottom: 1px solid #dfeef3 ; */
+  display: none;
+}
+header .navmenu .navitem .navicon{
+  transform : translatey(4px);
+  font-size: 16px;
+}
+
+header .navmenu .navitem {
+  position: relative;
+}
+header .navmenu .navitem .dropdown a {
+  padding: 16px;
+}
+header .navmenu .navitem a {
+  display: block;
+  text-decoration: none;
+  padding: 30px 16px;
+  color: #659dbd;
+  /* background-color: #659dbd; */
+  /* border: 1px solid blueviolet; */
+}
+header .navmenu {
+  display: flex;
+}
+.-td-none {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-wrapper {
+  font-size: 1.4rem;
+}
+.logo-wrapper span {
+  /* background-color: #659dbd; */
+  background-color: #8d8741;
+  padding: 0 5px;
+  line-height: 0;
+  border-radius: 2px;
+  color: aliceblue;
+}
+
+/* =============================================================================  COMPONENTS ============================================================================= */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* =============================================================================    PAGES    ============================================================================= */
+/* ADMIN AND USER PAGES */
+
+/* =============================================================================    PAGES    ============================================================================= */
