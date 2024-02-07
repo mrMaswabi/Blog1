@@ -16,13 +16,13 @@
       </a>
       <nav>
        
-        <form action="index.html" method="post" class="header-search=form hide">
+        <form action="index.html" method="post" class="header-search-form hide">
           <input type="text" name="search-item" placeholder="Search this website..." 
           class=" input-control input-control-sm search-input">
 
         </form>
       <span role="button">  
-          <div class="search-item"><ion-icon name="search-outline"></ion-icon>
+          <div class="search-icon"><ion-icon name="search-outline"></ion-icon>
           </div>
         </span>
         <ul class="navmenu">
@@ -50,7 +50,9 @@
               <ion-icon name="chevron-down-outline" class="navicon"></ion-icon>
             </a> -->
               <!-- <ion-icon name="caret-down-outline"></ion-icon> -->
-            <ul class="dropdown">
+            <ul class="dropdown
+            
+            . ">
               <li><a href="#">Dashboard</a></li>
               <li><a href="#">Logout</a></li>
             </ul>
@@ -58,6 +60,22 @@
         </ul>
       </nav>
     </header>
-  
+  <script>
+// Toggle search input 
+const searchIcon = document.querySelector('.search-icon');
+const headerSearchForm = document.querySelector('.header-search-form');
+const searchInput = document.querySelector('.search-input');
+
+
+function toggleSerchbar(){
+  searchIcon.classList.toggle('hide');
+  headerSearchForm.classList.toggle('hide');
+  searchInput.focus();
+}
+searchIcon.addEventListener('click', toggleSerchbar);
+searchInput.addEventListener('blur', toggleSerchbar);
+
+
+  </script>
   </body>
 </html>
