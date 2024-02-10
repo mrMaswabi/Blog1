@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="admin_style.css" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <title>Admin Dashboard</title>
+</head>
+
+<body>
+  <header>
+    <div class="nav-overlay">nav overlay</div>
+    <span role="button" class="menu-icon">
+      <ion-icon name="menu-outline"></ion-icon>
+    </span>
+    <a href="#" class="logo-wrapper -td-none">
+      <div><span>B</span>LOG   / admin</div> 
+     
+    </a>
+    <nav>
+      
+      <ul class="navmenu">
+       
+        <li class="navitem">
+          <a href="#">
+              <ion-icon name="person-circle-outline" class="navicon"></ion-icon>
+              Simon 
+              <ion-icon name="chevron-down-outline" class="navicon"></ion-icon>
+            </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="page-wrapper">
+    <div class="sidebar">
+        <ul class="list-menu">
+            <li><a href="#"> <ion-icon name="desktop-outline"></ion-icon> Dashboard <ion-icon name="chevron-forward-outline"></ion-icon></a</li>
+            <li><a href="#"> <ion-icon name="newspaper-outline"></ion-icon>Post <ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+            <li><a href="#"> <ion-icon name="key-outline"></ion-icon>Topics <ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="people-circle-outline"></ion-icon> Users <ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+            <li><a href="#"> <ion-icon name="albums-outline"></ion-icon> Roles <ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="key-outline"></ion-icon> Permissions <ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="albums-outline"></ion-icon> Collections <ion-icon name="chevron-forward-outline"></ion-icon></a></li>
+        </ul>
+        <div class="page-content">
+            <h1 class="center">Admin Dashboard</h1>
+        </div>
+    </div>
+  </div>
+  <script>
+    // Toggle search input
+    const mobileBreakpoint = 756;
+    const searchIcon = document.querySelector(".search-icon");
+    const headerSearchForm = document.querySelector(".header-search-form");
+    const logoWrapper  = document.querySelector(".logo-wrapper");
+    const searchInput = document.querySelector(".search-input");
+
+
+    const menuIcon = document.querySelector(".menu-icon");
+    const navOverlay = document.querySelector(".nav-overlay");
+    const navMenu = document.querySelector(".navmenu");
+    const dropdowns = document.querySelectorAll('.navitem .dropdown')
+
+    
+    menuIcon.addEventListener("click", function () {
+      navOverlay.classList.toggle("open");
+      navMenu.classList.toggle("open");
+    });
+    navOverlay.addEventListener("click", function () {
+      navOverlay.classList.remove("open");
+      navMenu.classList.remove("open");
+    });
+
+    dropdowns.forEach(dropdown =>{
+        const navItem = dropdown.closest('.navitem');
+        navItem.addEventListener('click', function() {
+          // alert('worked')
+            navItem.classList.toggle('active');
+        });
+
+    });
+  </script>
+</body>
+
+</html>
