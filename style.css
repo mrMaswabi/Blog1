@@ -40,6 +40,14 @@ header {
   box-shadow: 0.5px 0.5px white, -0.01em 0 0.9em gray;
   /* border: 1px solid red; */
 }
+.nav-overlay{
+  display: none;
+  
+}
+.menu-icon{
+  font-size: 24px;
+  display: none;
+}
 header nav {
   height: inherit;
   display: flex; 
@@ -104,8 +112,10 @@ header .navmenu .navitem a {
   text-decoration: none;
   padding: 30px 16px;
   color: #659dbd;
-  /* background-color: #659dbd; */
-  /* border: 1px solid blueviolet; */
+
+}
+header .navmenu .navitem a:hover {
+color: #061d2a;
 }
 header .navmenu {
   display: flex;
@@ -126,7 +136,107 @@ header .navmenu {
   border-radius: 2px;
   color: aliceblue;
 }
+/* ============================================================================= Media query  ============================================================================= */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
 
+@media only screen and (max-width: 1024px){
+
+
+  header {
+ padding: 0 10px;
+ /* border: 1px solid red;  */
+  }
+  
+
+
+}
+
+@media only screen and (max-width: 756px){
+
+  
+
+
+ header .menu-icon{
+    /* /* font-size: 24px; */
+    display: block; 
+     /* border: 1px solid red;  */
+
+  }
+  header nav {
+    
+  }
+  header .navmenu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  flex-direction: column;
+  height: 100%;
+  width: 250px;
+  overflow: scroll;
+  z-index: 9999999;
+  background: white;
+  padding: 50px 0;
+  transform: translateX(-250px);
+  transition: all 0.25s ease-in-out;
+
+  /* opacity: .5; */
+  }
+  header .navmenu .navitem a {
+
+    padding: 16px;
+  }
+  
+  header .navmenu .navitem {
+    /* to be styled  */
+       flex-direction: column;
+      }
+      
+
+  header .navmenu .navitem .dropdown {
+    /* border: 1px solid red; */
+    width: 100%;
+    top: 80px;
+    left: 0px;
+    position: static;
+    /* background-color: #fff; */
+    border-radius: 0px;
+    max-height: 200;
+    box-shadow: none;
+    transform: translateY(0px);
+    z-index: 1;
+    opacity: 1;
+   
+  }
+
+  header .navmenu .navitem .dropdown a {
+    padding-left: 32px;
+  }
+ .nav-overlay.open{
+    display: block;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .4;
+
+       /* border: 1px solid red; */
+    
+  }
+ .navmenu.open{
+    display: block;
+    transform: translateX(0px);
+    transition: all 0.25s ease-in-out;
+
+       /* border: 1px solid red; */
+    
+  }
+
+}
 /* =============================================================================  COMPONENTS ============================================================================= */
 /* ####################################################################################################################################################################### */
 /* ####################################################################################################################################################################### */
