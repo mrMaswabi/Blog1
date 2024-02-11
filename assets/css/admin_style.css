@@ -1,0 +1,391 @@
+/* =============================================================================   DEFAULTS  ============================================================================= */
+/* STYLE THAT SHOULD TAKE EFFECT BY DEFAULT IF I USE AN ELEMENT AND DON'T APPLY ANY SYLES THIS WILL APPLY BY DEFAULT   */
+* {
+  /* helps keep width  */
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fbeec1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hide {
+  display: none;
+}
+.center {
+  text-align: center;
+}
+
+.logout-link {
+  color: red;
+}
+/* =============================================================================   DEFAULTS  ============================================================================= */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* =============================================================================  COMPONENTS ============================================================================= */
+
+/* ELEMENTS THAT PROVIDE OR DISPLAY INFORMATION */
+
+header {
+  width: 100%;
+  height: 80px;
+  background—color: white;
+  border—bottom: 1px solid;
+  padding: 0 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aliceblue;
+  box-shadow: 0.5px 0.5px white, -0.01em 0 0.9em gray;
+  /* border: 1px solid red; */
+}
+.nav-overlay {
+  display: none;
+}
+.menu-icon {
+  font-size: 24px;
+  display: none;
+}
+header nav {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+header .navmenu .navitem .dropdown {
+  /* border: 1px solid red; */
+  width: 190px;
+  top: 80px;
+  left: 0px;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px white, -0.01em 0 0.9em gray;
+  transform: translateY(35px);
+  z-index: -5;
+  opacity: 0;
+}
+header .navmenu .navitem:hover .dropdown {
+  transform: translateY(0);
+  z-index: 5;
+  opacity: 1;
+  transition: all 0.25s cubic-bezier(0.17, 0.67, 0.6, 0.31);
+}
+
+header .navmenu .navitem .dropdown::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid white;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+header .navmenu .navitem .dropdown li {
+  border-bottom: 1px solid #dfeef3;
+}
+header .navmenu .navitem .dropdown li:last-child::after {
+  /* border-bottom: 1px solid #dfeef3 ; */
+  display: none;
+}
+header .navmenu .navitem .navicon {
+  transform: translatey(4px);
+  font-size: 16px;
+}
+
+header .navmenu .navitem {
+  position: relative;
+}
+header .navmenu .navitem .dropdown a {
+  padding: 16px;
+}
+header .navmenu .navitem a {
+  display: block;
+  text-decoration: none;
+  padding: 30px 16px;
+  color: #659dbd;
+}
+header .navmenu .navitem a:hover {
+  color: #061d2a;
+}
+header .navmenu {
+  display: flex;
+}
+.-td-none {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-wrapper {
+  font-size: 1.4rem;
+}
+.logo-wrapper span {
+  /* background-color: #659dbd; */
+  background-color: #8d8741;
+  padding: 0 5px;
+  line-height: 0;
+  border-radius: 2px;
+  color: aliceblue;
+}
+
+/* Admin Layout
+ */
+.page-wrapper {
+  display: flex;
+  min-height: 100%;
+  /* padding-right: 10px; */
+  /* border: 1px dashed rgb(216, 19, 19); */
+}
+.sidebar {
+  flex-basis: 18%;
+  padding: 20px;
+  min-height: 100%;
+  max-width: 260px;
+  background-color: #659dbd;
+  /* border: 1px solid red; */
+}
+.sidebar-author-mobile {
+  display: none;
+}
+
+.sidebar .list-menu li a .mnu-icon {
+  display: block;
+  /* color: red; */
+  margin-right: 12px;
+  /* border: 1px solid red; */
+}
+.page-wrapper .sidebar .list-menu li a {
+  text-decoration: none;
+  display: block;
+  padding: 15px 30px;
+  position: relative;
+  /* border: 1px solid red; */
+  display: flex;
+}
+.page-wrapper .sidebar .list-menu li a:hover {
+  color: #dfeef3;
+}
+.page-wrapper .sidebar .list-menu li a .chevron-forward {
+  /* color: #061d2a; */
+  position: absolute;
+  right: 5px;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+.page-wrapper .sidebar .list-menu {
+  margin: 0;
+  padding: 0;
+  padding-top: 2rem;
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+.page-wrapper .page-content {
+  /* border: 1px solid blue; */
+  flex-basis: 90%;
+  overflow-x: hidden;
+}
+
+/* ============================================================================= Media query  ============================================================================= */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+
+/* Admin media q */
+
+@media only screen and (max-width: 756px) {
+  .page-wrapper {
+    display: block;
+    min-height: 100%;
+    /* padding-right: 10px; */
+    /* border: 1px dashed rgb(216, 19, 19); */
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 340px;
+    z-index: 9999999;
+    overflow: hidden;
+    transform: translateX(-340px);
+    transition: transform 0.25s ease-in-out;
+  }
+
+  .sidebar.open {
+    transform: translateX(0px);
+    transition: transform 0.25s ease-in-out;
+  }
+
+  .sidebar-author-mobile {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 76px;
+    /* border: 1px solid blue; */
+  }
+  .avatar {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    header {
+      padding: 0 10px;
+      /* border: 1px solid red;  */
+    }
+  }
+
+  @media only screen and (max-width: 756px) {
+    header .menu-icon {
+      /* /* font-size: 24px; */
+      display: block;
+      /* border: 1px solid red;  */
+    }
+    nav {
+      /* border: 1px solid red; */
+      flex-grow: 1;
+    }
+    .search-item,
+    .header-search-form input {
+      width: 300%;
+      border: 1px solid red;
+      align-items: center;
+    }
+
+    header .logo-wrapper {
+      width: 100%;
+      text-align: center;
+      /* border: 1px solid red; */
+    }
+
+    header .navmenu {
+      position: fixed;
+      left: 0;
+      top: 0;
+      flex-direction: column;
+      height: 100%;
+      width: 250px;
+      overflow: scroll;
+      z-index: 9999999;
+      background: white;
+      padding: 50px 0;
+      transform: translateX(-250px);
+      transition: all 0.25s ease-in-out;
+
+      /* opacity: .5; */
+    }
+    header .navmenu .navitem a {
+      padding: 16px;
+    }
+
+    header .navmenu .navitem {
+      /* to be styled  */
+      flex-direction: column;
+    }
+
+    header .navmenu .navitem .dropdown {
+      /* border: 1px solid red; */
+      width: 100%;
+      top: 80px;
+      left: 0px;
+      position: static;
+      /* background-color: #fff; */
+      border-radius: 0px;
+      max-height: 0px;
+      overflow: hidden;
+      box-shadow: none;
+      transform: translateY(0px);
+      z-index: 1;
+      opacity: 1;
+      transition: max-height 0.25s ease-in-out;
+    }
+
+    header .navmenu .navitem .dropdown a {
+      padding-left: 32px;
+    }
+
+    .navmenu .navitem.active .dropdown {
+      max-height: 300px;
+      transition: max-height 0.25s ease-in-out;
+    }
+    .nav-overlay.open {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.4;
+
+      /* border: 1px solid red; */
+    }
+    .navmenu.open {
+      display: block;
+      transform: translateX(0px);
+      transition: all 0.25s ease-in-out;
+
+      /* border: 1px solid red; */
+    }
+  }
+}
+
+/* responsive boxes/containers */
+
+.admin-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sm-box{
+  padding: 32px 10px;
+  width: 100%;
+  max-width: 500px;
+}
+.md-box{
+  /* max-width: 750px; */
+  width: 75%;
+  padding: 32px 10px;
+
+}
+
+.lg-box{
+  width: 95%;
+  padding: 32px 10px;
+
+}
+
+@media only screen and (max-width: 1024px) {
+ 
+   .md-box , .lg-box{
+    width: 96%;
+  }
+}
+/* =============================================================================  COMPONENTS ============================================================================= */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* ####################################################################################################################################################################### */
+/* =============================================================================    PAGES    ============================================================================= */
+/* ADMIN AND USER PAGES */
+
+/* =============================================================================    PAGES    ============================================================================= */
