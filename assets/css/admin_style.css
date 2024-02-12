@@ -24,9 +24,9 @@ body {
 .logout-link {
   color: red;
 }
-hr{
-  border: 1px solid #659DBD ;
-  opacity: .2;
+hr {
+  border: 1px solid #659dbd;
+  opacity: 0.2;
 }
 /* =============================================================================   DEFAULTS  ============================================================================= */
 /* ####################################################################################################################################################################### */
@@ -37,7 +37,7 @@ hr{
 
 /* ELEMENTS THAT PROVIDE OR DISPLAY INFORMATION */
 
-.message{
+.message {
   margin: 10px 0;
   padding: 10px 15px;
   display: flex;
@@ -49,23 +49,27 @@ hr{
 .message-icon {
   font-size: 1.75rem;
   margin-right: 10px;
-  }
+}
 
-  .message.success{
-    border: solid #00bc98;
-    color: #00bc98;
-    background-color: #d4ffbc;
-  }
-  .message.warning{
-    border: solid hsl(41, 100%, 37%);
-    color: hsl(41, 100%, 37%);
-    background-color: #ffdfab;
-  }
-  .message.error{
-    border: solid #d80505;
-    color: #f94700;
-    background-color: #fdd2ce;
-  }
+.message.success {
+  border: solid #00bc98;
+  color: #00bc98;
+  background-color: #d4ffbc;
+}
+.message.warning {
+  border: solid hsl(41, 100%, 37%);
+  color: hsl(41, 100%, 37%);
+  background-color: #ffdfab;
+}
+.message.error {
+  border: solid #d80505;
+  color: #f94700;
+  background-color: #fdd2ce;
+}
+.featured-post-form {
+  padding: 32px 0px;
+}
+
 header {
   width: 100%;
   height: 80px;
@@ -235,6 +239,50 @@ header .navmenu {
   overflow-x: hidden;
 }
 
+.featured-post-form .input-control-sm {
+  max-width: 400px;
+  width: 100%;
+}
+/* TABLES */
+.admin-table {
+}
+.table-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.table-filter-group {
+  flex-basis: 50%;
+  /* border: solid red; */
+}
+.table-buttons {
+  /* border: solid red; */
+  text-align: right;
+  flex-basis: 50%;
+}
+
+@media only screen and (max-width: 756px) {
+  .input-control-sm{
+  margin: 8px 0;
+  }
+  .table-actions select  {
+    min-width: 150px;
+    margin: 8px 0;
+  }
+  .table-filter-group input ,
+  .table-filter-group select {
+    min-width: 150px;
+    margin: 8px 0;
+  }
+  .table-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .admin-table .table-actions .table-buttons .btn{
+    margin: 8px 0;
+  }
+}
+
 /* ============================================================================= Media query  ============================================================================= */
 /* ####################################################################################################################################################################### */
 /* ####################################################################################################################################################################### */
@@ -389,27 +437,25 @@ header .navmenu {
   margin: 0 auto;
 }
 
-.sm-box{
+.sm-box {
   padding: 32px 10px;
   width: 100%;
   max-width: 500px;
 }
-.md-box{
+.md-box {
   /* max-width: 750px; */
   width: 75%;
   padding: 32px 10px;
-
 }
 
-.lg-box{
+.lg-box {
   width: 95%;
   padding: 32px 10px;
-
 }
 
 @media only screen and (max-width: 1024px) {
- 
-   .md-box , .lg-box{
+  .md-box,
+  .lg-box {
     width: 96%;
   }
 }
