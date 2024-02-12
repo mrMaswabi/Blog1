@@ -24,6 +24,10 @@ body {
 .logout-link {
   color: red;
 }
+hr{
+  border: 1px solid #659DBD ;
+  opacity: .2;
+}
 /* =============================================================================   DEFAULTS  ============================================================================= */
 /* ####################################################################################################################################################################### */
 /* ####################################################################################################################################################################### */
@@ -33,6 +37,35 @@ body {
 
 /* ELEMENTS THAT PROVIDE OR DISPLAY INFORMATION */
 
+.message{
+  margin: 10px 0;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 3px;
+  border: solid red;
+}
+.message-icon {
+  font-size: 1.75rem;
+  margin-right: 10px;
+  }
+
+  .message.success{
+    border: solid #00bc98;
+    color: #00bc98;
+    background-color: #d4ffbc;
+  }
+  .message.warning{
+    border: solid hsl(41, 100%, 37%);
+    color: hsl(41, 100%, 37%);
+    background-color: #ffdfab;
+  }
+  .message.error{
+    border: solid #d80505;
+    color: #f94700;
+    background-color: #fdd2ce;
+  }
 header {
   width: 100%;
   height: 80px;
