@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../HTMLBLOG/assets/css/admin_style.css" />
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <title>BLOG(change me when your done)</title>
@@ -21,7 +21,7 @@
     </a>
     <nav>
       <form action="index.html" method="post" class="header-search-form hide">
-        <input type="text" name="search-item" placeholder="Search this website..."
+        <input type="text" name="search-item" id="search-item" placeholder="Search this website..."
           class="input-control input-control-sm search-input" />
       </form>
       <span role="button">
@@ -38,7 +38,7 @@
           <a href="#">Best Articles<ion-icon name="chevron-down-outline" class="navicon"></ion-icon>
           </a>
 
-          <ul class="dropdown">
+          <ul class="dropdown ">
             <li><a href="#">Best of 2023</a></li>
             <li><a href="#">Best of 2022</a></li>
             <li><a href="#">Best of 2021</a></li>
@@ -54,7 +54,7 @@
               <ion-icon name="chevron-down-outline" class="navicon"></ion-icon>
             </a> -->
           <!-- <ion-icon name="caret-down-outline"></ion-icon> -->
-          <ul class="dropdown .">
+          <ul class="dropdown ">
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Logout</a></li>
           </ul>
@@ -64,35 +64,48 @@
   </header>
   <script>
     // Toggle search input
+    const mobileBreakpoint = 756;
     const searchIcon = document.querySelector(".search-icon");
     const headerSearchForm = document.querySelector(".header-search-form");
+    const logoWrapper  = document.querySelector(".logo-wrapper");
     const searchInput = document.querySelector(".search-input");
 
     function toggleSerchbar() {
       searchIcon.classList.toggle("hide");
       headerSearchForm.classList.toggle("hide");
       searchInput.focus();
+      if( window.innerWidth <= mobileBreakpoint){
+        logoWrapper.classList.toggle('hide');
+      }
     }
     searchIcon.addEventListener("click", toggleSerchbar);
     searchInput.addEventListener("blur", toggleSerchbar);
 
     // Navbar resposniveness
 
-    const menuIcon = document.querySelector('.menu-icon');
-    const navOverlay = document.querySelector('.nav-overlay');
-    const navMenu = document.querySelector('.navmenu');
-    menuIcon.addEventListener('click', function () {
-        navOverlay.classList.toggle('open')
-        navMenu.classList.toggle('open')
-      });
-      navOverlay.addEventListener('click', function () {
-        navOverlay.classList.remove('open')
-        navMenu.classList.remove('open')
-      });
+    const menuIcon = document.querySelector(".menu-icon");
+    const navOverlay = document.querySelector(".nav-overlay");
+    const navMenu = document.querySelector(".navmenu");
+    const dropdowns = document.querySelectorAll('.navitem .dropdown')
 
+    
+    menuIcon.addEventListener("click", function () {
+      navOverlay.classList.toggle("open");
+      navMenu.classList.toggle("open");
+    });
+    navOverlay.addEventListener("click", function () {
+      navOverlay.classList.remove("open");
+      navMenu.classList.remove("open");
+    });
 
+    dropdowns.forEach(dropdown =>{
+        const navItem = dropdown.closest('.navitem');
+        navItem.addEventListener('click', function() {
+          // alert('worked')
+            navItem.classList.toggle('active');
+        });
 
-
+    });
   </script>
 </body>
 

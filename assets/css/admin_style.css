@@ -28,6 +28,13 @@ hr {
   border: 1px solid #659dbd;
   opacity: 0.2;
 }
+.inline-divider{
+  color: #061d2a;
+  margin: 0px 4px 4xp;
+}
+.responsive-table{
+  overflow-x: auto;
+}
 /* =============================================================================   DEFAULTS  ============================================================================= */
 /* ####################################################################################################################################################################### */
 /* ####################################################################################################################################################################### */
@@ -243,13 +250,27 @@ header .navmenu {
   max-width: 400px;
   width: 100%;
 }
-/* TABLES */
+/* TABLES action */
 .admin-table {
 }
 .table-actions {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
+}
+.td-action-links a.trash{
+  color: #c48b18;
+}
+.td-action-links a.related-posts{
+  color: #5364ff;
+}
+.td-action-links a{
+  font-size: 0.75rem;
+}
+
+.td-action-links{
+  
+  margin-top: 10px;
 }
 .table-filter-group {
   flex-basis: 50%;
@@ -259,6 +280,22 @@ header .navmenu {
   /* border: solid red; */
   text-align: right;
   flex-basis: 50%;
+}
+.admin-table table{
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #f7efd3;
+}
+
+.admin-table td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-decoration: none;
+}
+.admin-table a{
+  text-decoration: none;
+  color: inherit;
 }
 
 @media only screen and (max-width: 756px) {
