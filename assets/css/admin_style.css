@@ -35,6 +35,54 @@ hr {
 .responsive-table{
   overflow-x: auto;
 }
+.input-group{
+  margin-bottom: 10px;
+  display: block;
+
+}
+.input-group label{
+  display: block;
+  margin-bottom: 8px;
+}
+.input-control:focus {
+  outline: 0;
+border: solid #659dbd;
+}
+.input-control{
+  display: block;
+  width: 100%;
+  font-size: 1.1rem;
+  color: #061d2a;
+  background-color: #f7efd3;
+  border: 1px solid #050505;
+  line-height: 1.6rem;
+  padding: 0.75rem 1rem;
+  border-radius: 3px;
+  height: 52px;
+  font-family: inherit;
+}
+.input-control{
+  height: 42px !important;
+  display: inline-block;
+}
+textarea.input-control{
+height: unset !important;
+
+}
+.post-details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.post-details .select-topic-wrapper{
+  width: 80%;
+}
+.post-details .image-wrapper button{
+  font-size: 1.6rem;
+  align-items: center;
+}
+
 /* =============================================================================   DEFAULTS  ============================================================================= */
 /* ####################################################################################################################################################################### */
 /* ####################################################################################################################################################################### */
@@ -186,6 +234,25 @@ header .navmenu {
   color: aliceblue;
 }
 
+/* Table pagination */
+
+.pagination-links{
+  display: flex;
+justify-content: flex-end;
+}
+
+.pagination-links .link{
+  font-size: 0.9rem;
+  background-color: transparent;
+  padding: 0.35rem 0.75rem;
+  min-width: 35px;
+  border: 1px solid #659dbd;
+}
+.pagination-links .active{
+  color: #fff;
+  background-color: rgb(68, 177, 250);
+
+}
 /* Admin Layout
  */
 .page-wrapper {
@@ -297,7 +364,13 @@ header .navmenu {
   text-decoration: none;
   color: inherit;
 }
+/* ADMIN FORMS */
 
+
+.admin-form{
+  margin: 30px auto;
+  background-color: #fbf4dc;
+}
 @media only screen and (max-width: 756px) {
   .input-control-sm{
   margin: 8px 0;
@@ -317,6 +390,7 @@ header .navmenu {
   }
   .admin-table .table-actions .table-buttons .btn{
     margin: 8px 0;
+    
   }
 }
 

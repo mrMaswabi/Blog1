@@ -91,7 +91,7 @@
      
             <form action="#" class="admin-form md-box" method="post" enctype="multipart/form-data">
                     <h1 class="center form-title"> Create Post</h1>
-                    <ul class="form-errors">
+                    <ul class="form-errors hide">
                         <li> Username required</li>
                         <li> Post body is required</li>
                         <li> Topic is required</li>
@@ -103,13 +103,13 @@
                             </div>
                             <div class="input-group">
                                 <label for="post-editor">Body</label>
-                                <textarea type="body" name="title" id="title" class="input-control"></textarea>
+                                <textarea type="body" name="title" id="title" class="input-control" rows="10"></textarea>
                             </div>
                             <div class="post-details">
                                 <div class="select-topic-wrapper">
                                         <div class="input-group">
                                             <label for="topic">Topic</label>
-                                            <select name="topic_id" id="topic">
+                                            <select name="topic_id " id="topic" class="input-control">
                                                 <option></option>
                                                 <option value="Printing"> Printing</option>
                                                 <option value="Tech">Tech </option>
