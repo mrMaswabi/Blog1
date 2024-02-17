@@ -20,7 +20,11 @@ body {
 .center {
   text-align: center;
 }
-
+.bg-image{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center ;
+}
 .logout-link {
   color: red;
 }
@@ -69,19 +73,7 @@ textarea.input-control{
 height: unset !important;
 
 }
-.post-details{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-.post-details .select-topic-wrapper{
-  width: 80%;
-}
-.post-details .image-wrapper button{
-  font-size: 1.6rem;
-  align-items: center;
-}
+
 
 /* =============================================================================   DEFAULTS  ============================================================================= */
 /* ####################################################################################################################################################################### */
@@ -89,9 +81,51 @@ height: unset !important;
 /* ####################################################################################################################################################################### */
 /* ####################################################################################################################################################################### */
 /* =============================================================================  COMPONENTS ============================================================================= */
+/* ADMIN FORMS */
+
+
+.admin-form{
+  margin: 30px auto;
+  background-color: #fbf4dc;
+}
+.post-details{
+  display: flex;
+
+   /* border: solid red; */
+}
+.post-details .select-topic-wrapper{
+  flex-basis: 80%;
+}
+.post-details .image-wrapper {
+  padding: 25px 0px 0px 20px;
+  flex-basis: 20%;
+  /* font-size: 1.6rem; */
+
+}
+.post-details .image-wrapper .img-btn{
+  
+ width: 100%;
+ height: 42px;
+ border-radius: 3px;
+ border: dashed lightgray ;
+ align-items: center;
+ justify-content: center;
+}
+
+.post-details .image-wrapper .img-btn .image-outline{
+  transform: translateY(1px);
+}
 
 /* ELEMENTS THAT PROVIDE OR DISPLAY INFORMATION */
 
+/* flash messages */
+.form-errors{
+  border: solid .1rem #d80505;
+  color: #9e2e02;
+  background-color: #fdd2ce;
+  padding: 16px 32px;
+  border-radius: 3px;
+}
 .message {
   margin: 10px 0;
   padding: 10px 15px;
@@ -364,13 +398,9 @@ justify-content: flex-end;
   text-decoration: none;
   color: inherit;
 }
-/* ADMIN FORMS */
 
 
-.admin-form{
-  margin: 30px auto;
-  background-color: #fbf4dc;
-}
+
 @media only screen and (max-width: 756px) {
   .input-control-sm{
   margin: 8px 0;
@@ -556,7 +586,7 @@ justify-content: flex-end;
 .md-box {
   /* max-width: 750px; */
   width: 75%;
-  padding: 32px 10px;
+  padding: 32px 20px;
 }
 
 .lg-box {

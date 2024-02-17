@@ -91,7 +91,7 @@
      
             <form action="#" class="admin-form md-box" method="post" enctype="multipart/form-data">
                     <h1 class="center form-title"> Create Post</h1>
-                    <ul class="form-errors hide">
+                    <ul class="form-errors ">
                         <li> Username required</li>
                         <li> Post body is required</li>
                         <li> Topic is required</li>
@@ -102,8 +102,8 @@
                                 <input type="text" name="title" id="title" class="input-control">
                             </div>
                             <div class="input-group">
-                                <label for="post-editor">Body</label>
-                                <textarea type="body" name="title" id="title" class="input-control" rows="10"></textarea>
+                                <label for="body">Body</label>
+                                <textarea type="body" name="body" id="body" class="input-control" rows="10"></textarea>
                             </div>
                             <div class="post-details">
                                 <div class="select-topic-wrapper">
@@ -121,9 +121,9 @@
                                 <div class="image-wrapper">
 
                                     <input type="file" name="image" class="hide image-input">
-                                    <button type="button" class="bg-image">
+                                    <button type="button" class="bg-image img-btn">
                                         <span><ion-icon name="image-outline" class="image-outline"></ion-icon>
-                                            <span></span>Upload
+                                            <span class="upload-txt"></span>Upload
                                         </span>    
                                         
                                     </button>
@@ -147,6 +147,33 @@
 
 <script>
 
+const imgBtn = document.querySelector(".img-btn");
+const imageInput = document.querySelector(".image-input");
+const uploadTxt = document.querySelector('.upload-txt');
+
+imgBtn.addEventListener('click', function(){
+  // alert('clicked');
+  imageInput.click();
+});
+imageInput.addEventListener('change', function() {
+  const file = imageInput.files[0];
+  if (file){
+    const reader = new FileReader();
+    reader.onload = function(e){
+        imgBtn.style.backgroundImage = `url(${e.target.result})`;
+        imgBtn.style.height = '150px' ;
+        imgBtn.style.border = 'none' ;
+        uploadTxt.classList.toggle('hide')
+       
+    }
+
+    reader.readAsDataURL(file);
+  }
+  else{
+    alert('didnt work')
+  }
+  // console.log({ file: imageInput.files[0]})
+})
 </script>
 <!-- <footer class="center"> footer</footer> -->
 
