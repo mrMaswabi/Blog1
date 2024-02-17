@@ -1,180 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.2/dist/quill.snow.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/admin_style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.2/dist/quill.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+   
+    <title>Admin - Create Posts</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../../assets/css/admin_style.css" />
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <title>Admin - Create Posts </title>
-</head>
+  <body>
+    <header>
+      <div class="nav-overlay">nav overlay</div>
+      <span role="button" class="menu-icon">
+        <ion-icon name="menu-outline"></ion-icon>
+      </span>
+      <a href="#" class="logo-wrapper -td-none">
+        <div><span>B</span>LOG / admin</div>
+      </a>
+      <nav>
+        <ul class="navmenu">
+          <li class="navitem">
+            <a href="#">
+              <ion-icon name="person-circle-outline" class="navicon"></ion-icon>
+              Simon
+              <ion-icon name="chevron-down-outline" class="navicon"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <header>
-    <div class="nav-overlay">nav overlay</div>
-    <span role="button" class="menu-icon">
-      <ion-icon name="menu-outline"></ion-icon>
-    </span>
-    <a href="#" class="logo-wrapper -td-none">
-      <div><span>B</span>LOG / admin</div>
-    </a>
-    <nav>
-      <ul class="navmenu">
-        <li class="navitem">
-          <a href="#">
-            <ion-icon name="person-circle-outline" class="navicon"></ion-icon>
-            Simon
-            <ion-icon name="chevron-down-outline" class="navicon"></ion-icon>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="page-wrapper">
-    <div class="sidebar">
-      <div class="sidebar-author-mobile">
-        <img class="avatar" src="../../assets/images/avatar/simon.jpg" alt="" />
-        <span>
-          <h3 class="author-name">aSkillCalledLuck</h3>
-        </span>
-        <a href="/logout" class="logout-link">Logout</a>
+    <div class="page-wrapper">
+      <div class="sidebar">
+        <div class="sidebar-author-mobile">
+          <img
+            class="avatar"
+            src="../../assets/images/avatar/simon.jpg"
+            alt=""
+          />
+          <span>
+            <h3 class="author-name">aSkillCalledLuck</h3>
+          </span>
+          <a href="/logout" class="logout-link">Logout</a>
+        </div>
+        <ul class="list-menu">
+          <li>
+            <a href="../dashboard.html">
+              <ion-icon name="desktop-outline" class="mnu-icon"></ion-icon>
+              Dashboard
+              <ion-icon
+                name="chevron-forward-outline"
+                class="chevron-forward"
+              ></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <ion-icon class="mnu-icon" name="newspaper-outline"></ion-icon
+              >Post
+              <ion-icon
+                name="chevron-forward-outline"
+                class="chevron-forward"
+              ></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="#">
+              <ion-icon class="mnu-icon" name="key-outline"></ion-icon>Topics
+              <ion-icon
+                name="chevron-forward-outline"
+                class="chevron-forward"
+              ></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><ion-icon
+                class="mnu-icon"
+                name="people-circle-outline"
+              ></ion-icon>
+              Users
+              <ion-icon
+                name="chevron-forward-outline"
+                class="chevron-forward"
+              ></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="#">
+              <ion-icon class="mnu-icon" name="albums-outline"></ion-icon> Roles
+              <ion-icon
+                name="chevron-forward-outline"
+                class="chevron-forward"
+              ></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><ion-icon class="mnu-icon" name="key-outline"></ion-icon>
+              Permissions
+              <ion-icon
+                name="chevron-forward-outline"
+                class="chevron-forward"
+              ></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              ><ion-icon class="mnu-icon" name="albums-outline"></ion-icon>
+              Collections
+              <ion-icon
+                name="chevron-forward-outline"
+                class="chevron-forward"
+              ></ion-icon
+            ></a>
+          </li>
+        </ul>
       </div>
-      <ul class="list-menu">
-        <li>
-          <a href="../dashboard.html">
-            <ion-icon name="desktop-outline" class="mnu-icon"></ion-icon>
-            Dashboard
-            <ion-icon name="chevron-forward-outline" class="chevron-forward"></ion-icon>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <ion-icon class="mnu-icon" name="newspaper-outline"></ion-icon>Post
-            <ion-icon name="chevron-forward-outline" class="chevron-forward"></ion-icon></a>
-        </li>
-        <li>
-          <a href="#">
-            <ion-icon class="mnu-icon" name="key-outline"></ion-icon>Topics
-            <ion-icon name="chevron-forward-outline" class="chevron-forward"></ion-icon></a>
-        </li>
-        <li>
-          <a href="#"><ion-icon class="mnu-icon" name="people-circle-outline"></ion-icon>
-            Users
-            <ion-icon name="chevron-forward-outline" class="chevron-forward"></ion-icon></a>
-        </li>
-        <li>
-          <a href="#">
-            <ion-icon class="mnu-icon" name="albums-outline"></ion-icon> Roles
-            <ion-icon name="chevron-forward-outline" class="chevron-forward"></ion-icon></a>
-        </li>
-        <li>
-          <a href="#"><ion-icon class="mnu-icon" name="key-outline"></ion-icon>
-            Permissions
-            <ion-icon name="chevron-forward-outline" class="chevron-forward"></ion-icon></a>
-        </li>
-        <li>
-          <a href="#"><ion-icon class="mnu-icon" name="albums-outline"></ion-icon>
-            Collections
-            <ion-icon name="chevron-forward-outline" class="chevron-forward"></ion-icon></a>
-        </li>
-      </ul>
-    </div>
 
-
-
-<!-- PAGE CONTENT  -->
-    <div class="page-content">
-      <div class="admin-container">
-        <div class="admin-table lg-box">
-     
-            <form action="#" class="admin-form md-box" method="post" enctype="multipart/form-data">
-                    <h1 class="center form-title"> Create Post</h1>
-                    <ul class="form-errors ">
-                        <li> Username required</li>
-                        <li> Post body is required</li>
-                        <li> Topic is required</li>
-                        <li> Image is required</li>
-                    </ul>
-                            <div class="input-group">
-                                <label for="title">Title</label>
-                                <input type="text" name="title" id="title" class="input-control">
-                            </div>
-                            <div class="input-group">
-                                <label for="body">Body</label>
-                                <textarea type="body" name="body" id="body" class="input-control" rows="10"></textarea>
-                            </div>
-                            <div class="post-details">
-                                <div class="select-topic-wrapper">
-                                        <div class="input-group">
-                                            <label for="topic">Topic</label>
-                                            <select name="topic_id " id="topic" class="input-control">
-                                                <option></option>
-                                                <option value="Printing"> Printing</option>
-                                                <option value="Tech">Tech </option>
-                                                <option value="Journaling"> Journaling</option>
-                                            </select>
-                                        </div>
-                                    
-                                </div>
-                                <div class="image-wrapper">
-
-                                    <input type="file" name="image" class="hide image-input">
-                                    <button type="button" class="bg-image img-btn">
-                                        <span><ion-icon name="image-outline" class="image-outline"></ion-icon>
-                                            <span class="upload-txt"></span>Upload
-                                        </span>    
-                                        
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="input-group">
-                                <label for="published">    <input type="checkbox" name="published" id="published">Published</label>
-                            
-                            </div>
-                            <div class="input-group">
-                                <button type="submit" class="btn primary-btn big btn"> Save</button>
-                            </div>
+      <!-- PAGE CONTENT  -->
+      <div class="page-content">
+        <div class="admin-container">
+          <div class="admin-table lg-box">
+            <form
+              action="#"
+              class="admin-form md-box"
+              method="post"
+              enctype="multipart/form-data"
+            >
+              <h1 class="center form-title">Create Post</h1>
+              <ul class="form-errors">
+                <li>Username required</li>
+                <li>Post body is required</li>
+                <li>Topic is required</li>
+                <li>Image is required</li>
+              </ul>
+              <div class="input-group">
+                <label for="title">Title</label>
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  class="input-control"
+                />
+              </div>
+              <div class="input-group">
+                <label for="body">Body</label>
+               
+                <div id="body" class="body"></div>
+              </div>
+              <div class="post-details">
+                <div class="select-topic-wrapper">
+                  <div class="input-group">
+                    <label for="topic">Topic</label>
+                    <select name="topic_id " id="topic" class="input-control">
+                      <option></option>
+                      <option value="Printing">Printing</option>
+                      <option value="Tech">Tech</option>
+                      <option value="Journaling">Journaling</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="image-wrapper">
+                  <input type="file" name="image" class="hide image-input" />
+                  <button type="button" class="bg-image img-btn">
+                    <span
+                      ><ion-icon
+                        name="image-outline"
+                        class="image-outline"
+                      ></ion-icon>
+                      <span class="upload-txt"></span>Upload
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="published">
+                  <input
+                    type="checkbox"
+                    name="published"
+                    id="published"
+                  />Published</label
+                >
+              </div>
+              <div class="input-group">
+                <button type="submit" class="btn primary-btn big-btn">
+                  Save
+                </button>
+              </div>
             </form>
-
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- <script src="../assets/js/admin.js"></script> -->
-</body>
 
-<script>
+  </body>  
+ 
 
-const imgBtn = document.querySelector(".img-btn");
-const imageInput = document.querySelector(".image-input");
-const uploadTxt = document.querySelector('.upload-txt');
+  <!-- <script src="../../assets/js/admin.js"></script> -->
+ 
 
-imgBtn.addEventListener('click', function(){
-  // alert('clicked');
-  imageInput.click();
-});
-imageInput.addEventListener('change', function() {
-  const file = imageInput.files[0];
-  if (file){
-    const reader = new FileReader();
-    reader.onload = function(e){
-        imgBtn.style.backgroundImage = `url(${e.target.result})`;
-        imgBtn.style.height = '150px' ;
-        imgBtn.style.border = 'none' ;
-        uploadTxt.classList.toggle('hide')
-       
-    }
-
-    reader.readAsDataURL(file);
-  }
-  else{
-    alert('didnt work')
-  }
-  // console.log({ file: imageInput.files[0]})
-})
-</script>
-<!-- <footer class="center"> footer</footer> -->
-
+  
+  <!-- <footer class="center"> footer</footer> -->
 </html>
+<script src="../../assets/js/qill.js"></script>
+ <script src="../../assets/js/admin.js"></script>
