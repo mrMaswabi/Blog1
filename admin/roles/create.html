@@ -12,7 +12,6 @@
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.2/dist/quill.js"></script>
     <script
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
@@ -23,7 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <title>Admin - Create Posts</title>
+    <title>Admin - Create Roles</title>
   </head>
 
   <body>
@@ -142,65 +141,28 @@
           <div class="admin-table lg-box">
             <form
               action="#"
-              class="admin-form md-box"
+              class="admin-form sm-box"
               method="post"
-              enctype="multipart/form-data"
+            
             >
-              <h1 class="center form-title">Create Post</h1>
-              <ul class="form-errors">
-                <li>Username required</li>
-                <li>Post body is required</li>
-                <li>Topic is required</li>
-                <li>Image is required</li>
-              </ul>
+              <h1 class="center form-title">Create Role</h1>
+           
               <div class="input-group">
-                <label for="title">Title</label>
+                <label for="name">Name</label>
                 <input
                   type="text"
-                  name="title"
-                  id="title"
+                  name="name"
+                  id="name"
                   class="input-control"
                 />
               </div>
               <div class="input-group">
-                <label for="body">Body</label>
+                <label for="description">Description</label>
 
-                <div id="body" class="body"></div>
+                <textarea id="description" class="description input-control"></textarea>
               </div>
-              <div class="post-details">
-                <div class="select-topic-wrapper">
-                  <div class="input-group">
-                    <label for="topic">Topic</label>
-                    <select name="topic_id " id="topic" class="input-control">
-                      <option></option>
-                      <option value="Printing">Printing</option>
-                      <option value="Tech">Tech</option>
-                      <option value="Journaling">Journaling</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="image-wrapper">
-                  <input type="file" name="image" class="hide image-input" />
-                  <button type="button" class="bg-image img-btn">
-                    <span
-                      ><ion-icon
-                        name="image-outline"
-                        class="image-outline"
-                      ></ion-icon>
-                      <span class="upload-txt"></span>Upload
-                    </span>
-                  </button>
-                </div>
-              </div>
-              <div class="input-group">
-                <label for="published">
-                  <input
-                    type="checkbox"
-                    name="published"
-                    id="published"
-                  />Published</label
-                >
-              </div>
+          
+         
               <div class="input-group">
                 <button type="submit" class="btn primary-btn big-btn">
                   Save
@@ -214,7 +176,6 @@
     <!-- <script src="../assets/js/admin.js"></script> -->
   </body>
 
-  <script src="../../assets/js/qill.js"></script>
 
   <script src="../../assets/js/admin.js"></script>
   <!-- <footer class="center"> footer</footer> -->
